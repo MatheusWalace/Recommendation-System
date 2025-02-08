@@ -1,0 +1,11 @@
+movieId,title,genres,rating
+1,Toy Story,Animation|Adventure,4.5
+2,The Matrix,Action|Sci-Fi,4.8
+3,Inception,Action|Sci-Fi|Drama,4.7
+4,Titanic,Romance|Drama,4.3
+5,Avatar,Action|Adventure,4.4
+6,The Lion King,Animation|Drama,4.6
+7,Interstellar,Sci-Fi|Drama,4.9
+8,The Dark Knight,Action|Crime|Drama,4.9
+9,Forrest Gump,Drama|Romance,4.8
+10,The Godfather,Crime|Drama,4.9
