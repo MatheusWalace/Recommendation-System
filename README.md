@@ -1,56 +1,69 @@
-Recommendation System
-A Python-based recommendation system designed to provide personalized suggestions to users based on their interaction history.
+# 🎬 Sistema de Recomendação de Filmes
 
-🚀 Installation
-Follow these steps to get your development environment set up.
+Este projeto implementa um sistema de recomendação de filmes utilizando **Python**, **Pandas**, **Scikit-Learn** e **Docker**.
 
-1. Clone the Repository
-bash
-Copiar
-Editar
-git clone https://github.com/MatheusWalace/Recommendation-System.git
-cd Recommendation-System
-2. Create a Virtual Environment (Optional but Recommended)
-bash
-Copiar
-Editar
+## 🚀 Tecnologias Utilizadas
+- Python 3.10
+- Pandas
+- NumPy
+- Scikit-Learn
+- Docker
+
+## 📂 Estrutura do Projeto
+```
+📂 movie-recommender
+│-- 📄 Dockerfile
+│-- 📄 requirements.txt
+│-- 📄 movies.csv
+│-- 📄 movie_recommender.py
+```
+
+## 📥 Instalação e Execução
+### 1️⃣ Clonar o repositório
+```sh
+git clone https://github.com/seu-usuario/movie-recommender.git
+cd movie-recommender
+```
+
+### 2️⃣ Criar e ativar um ambiente virtual (opcional, mas recomendado)
+```sh
 python -m venv venv
-3. Activate the Virtual Environment
-On Windows:
-bash
-Copiar
-Editar
-venv\Scripts\activate
-On macOS/Linux:
-bash
-Copiar
-Editar
-source venv/bin/activate
-4. Install Dependencies
-bash
-Copiar
-Editar
+source venv/bin/activate  # No Windows: venv\Scripts\activate
+```
+
+### 3️⃣ Instalar as dependências
+```sh
 pip install -r requirements.txt
-🛠️ Usage
-Running the Recommendation System
-To start the recommendation system, use the following command:
+```
 
-bash
-Copiar
-Editar
-python recommendation_system.py
-Key Features
-Personalized Recommendations: Suggests personalized items based on user preferences.
-Content-Based Filtering: Recommends items similar to what the user has liked.
-Collaborative Filtering: Uses past user interactions to predict what similar users may like.
-🤝 Contributing
-We welcome contributions! Here's how you can help:
+### 4️⃣ Executar o sistema de recomendação
+```sh
+python movie_recommender.py
+```
 
-Fork the repository.
-Create a branch for your feature: git checkout -b my-feature.
-Commit your changes: git commit -m 'Add new feature'.
-Push to the remote repository: git push origin my-feature.
-Create a pull request to merge your changes into the main branch.
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for more details.
+## 🐳 Executando com Docker
+### 1️⃣ Construir a imagem
+```sh
+docker build -t movie-recommender .
+```
 
+### 2️⃣ Rodar o contêiner
+```sh
+docker run --rm movie-recommender
+```
+
+## 📊 Como Funciona?
+1. O script lê o arquivo `movies.csv` com uma lista de filmes, gêneros e avaliações.
+2. Ele processa os gêneros usando **TF-IDF** e calcula similaridades entre filmes.
+3. O usuário pode inserir um título de filme e receber recomendações baseadas em similaridade.
+
+## 🎯 Exemplo de Uso
+```sh
+Filmes recomendados para 'The Matrix':
+- Inception
+- Interstellar
+- Avatar
+```
+
+## 📜 Licença
+Este projeto é open-source e está sob a licença MIT. Sinta-se livre para contribuir! 🚀
